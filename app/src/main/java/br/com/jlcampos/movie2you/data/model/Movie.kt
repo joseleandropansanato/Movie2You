@@ -17,7 +17,7 @@ data class Movie (
     @SerializedName(Constants.movie_vote_count)
     var voteCount: Int,
     @SerializedName(Constants.movie_popularity)
-    var popularity: Int,
+    var popularity: Double,
     @SerializedName(Constants.movie_release_date)
     var releaseDate: String?
 )
