@@ -48,4 +48,16 @@ class DetailMovieViewModel(application: Application) : AndroidViewModel(applicat
 
     }
 
+
+    fun getRandomId(): String {
+
+        var id = 0
+
+        while ((id < 100) or (id == 119) or (id == 130) or (id == 131)) {
+            id = (100..150).random()
+        }
+
+        return id.toString()
+    }
+
 }
