@@ -4,22 +4,18 @@ import android.icu.text.CompactDecimalFormat
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MotionEvent
-import android.view.ScaleGestureDetector
 import android.view.View
 import android.widget.AbsListView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import br.com.jlcampos.movie2you.R
 import br.com.jlcampos.movie2you.data.model.Movie
 import br.com.jlcampos.movie2you.databinding.ActivityDetailMovieBinding
 import br.com.jlcampos.movie2you.presentation.adapter.MoviesAdapter
 import br.com.jlcampos.movie2you.utils.Constants
 import br.com.jlcampos.movie2you.utils.Status
-import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.squareup.picasso.Picasso
 import java.util.*
 

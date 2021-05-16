@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.jlcampos.movie2you.R
 import br.com.jlcampos.movie2you.data.model.Movie
 import br.com.jlcampos.movie2you.utils.Constants
+import br.com.jlcampos.movie2you.utils.MiscellaneousUtils
 import com.squareup.picasso.Picasso
 
 class MoviesAdapter: RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
@@ -54,7 +55,7 @@ class MoviesAdapter: RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
         fun bindView(movie: Movie, position: Int) {
             Picasso.get().load(Constants.URL_PHOTO + movie.poster).error(R.drawable.ic_baseline_image_24).into(img)
             title.text = movie.originalTitle
-            year.text = movie.releaseDate
+            year.text = MiscellaneousUtils().getYear(movie.releaseDate.toString())
 
             var txGenres = ""
             movie.genres?.forEach {
