@@ -24,10 +24,12 @@
 
         <TextView
             android:id="@+id/item_movie_tv_title"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             style="@style/title_item"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/item_movie_tv_year"
@@ -39,11 +41,12 @@
 
         <TextView
             android:id="@+id/item_movie_tv_genres"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             style="@style/text"
-            app:layout_constraintTop_toBottomOf="@id/item_movie_tv_title"
-            app:layout_constraintStart_toEndOf="@id/item_movie_tv_year"/>
+            app:layout_constraintTop_toTopOf="@id/item_movie_tv_year"
+            app:layout_constraintStart_toEndOf="@id/item_movie_tv_year"
+            app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

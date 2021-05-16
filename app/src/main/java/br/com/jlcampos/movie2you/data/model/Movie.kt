@@ -19,5 +19,7 @@ data class Movie (
     @SerializedName(Constants.movie_popularity)
     var popularity: Double,
     @SerializedName(Constants.movie_release_date)
-    var releaseDate: String?
+    var releaseDate: String?,
+    @SerializedName(Constants.similar_results_genre_ids)
+    var genreIds: List<Int>?
 )

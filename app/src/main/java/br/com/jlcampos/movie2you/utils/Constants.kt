@@ -14,6 +14,10 @@ class Constants private constructor() {
         const val AUTHORIZATION = "Authorization"
         const val BEARER = "Bearer "
 
+        const val QUERY_PAGE_SIZE = 20
+
+        const val MY_FAVORITE = "MY_FAVORITE"
+
         /** movie/{movie_id} **/
         const val movie_ws = "movie/"
         const val movie_id = "id"
@@ -27,5 +31,19 @@ class Constants private constructor() {
         const val movie_genres_id = "id"
         const val movie_genres_name = "name"
 
+        /** movie/{movie_id}/similar **/
+        const val similar_ws_move = "movie/"
+        const val similar_ws = "/similar"
+        const val similar_page = "page"
+        const val similar_total_pages = "total_pages"
+        const val similar_total_results = "total_results"
+        const val similar_results = "results"
+        const val similar_results_genre_ids = "genre_ids"
+
+        /** genre/movie/list **/
+        const val genres_ws = "genre/movie/list"
+        const val genres = "genres"
+        const val genres_id = "id"
+        const val genres_name = "name"
     }
 }

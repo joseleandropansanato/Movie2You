@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import br.com.jlcampos.movie2you.R
 import br.com.jlcampos.movie2you.data.model.Movie
+import br.com.jlcampos.movie2you.utils.Constants
 import com.squareup.picasso.Picasso
 
 class MoviesAdapter: RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
@@ -51,9 +52,15 @@ class MoviesAdapter: RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
         private val genres = view.findViewById<TextView>(R.id.item_movie_tv_genres)
 
         fun bindView(movie: Movie, position: Int) {
-            Picasso.get().load(movie.poster).error(R.drawable.ic_baseline_image_24).into(img)
+            Picasso.get().load(Constants.URL_PHOTO + movie.poster).error(R.drawable.ic_baseline_image_24).into(img)
             title.text = movie.originalTitle
             year.text = movie.releaseDate
+
+            var txGenres = ""
+            movie.genres?.forEach {
+                txGenres = txGenres + it.name + "; "
+            }
+            genres.text = txGenres
 
             itemView.setOnClickListener{
                 onItemClickListener?.let { it(movie, position) }
